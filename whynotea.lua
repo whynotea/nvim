@@ -1,4 +1,9 @@
 vim.keymap.set('i','jj','<ESC>')
+local opts = { noremap = true, silent = true}
+vim.keymap.set('n','<C-t>h',':tabprevious<CR>', opts)
+vim.keymap.set('n','<C-t>n',':tabnew<CR>', opts)
+vim.keymap.set('n','<C-t>x',':tabclose<CR>', opts)
+vim.keymap.set('n','<C-t>l',':tabnext<CR>', opts)
 
 local opt = vim.opt
 
