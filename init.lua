@@ -176,6 +176,17 @@ require('lazy').setup({
     },
   },
   {
+    "nvim-tree/nvim-tree.lua",
+    version = "*",
+    lazy = false,
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
+    config = function()
+      require("nvim-tree").setup {}
+    end,
+  },
+  {
     "Zeioth/compiler.nvim",
     cmd = {"CompilerOpen", "CompilerToggleResults", "CompilerRedo"},
     dependencies = { "stevearc/overseer.nvim" },
@@ -193,6 +204,10 @@ require('lazy').setup({
         default_detail = 1
       },
     },
+  },
+  {
+    "towolf/vim-helm",
+    version = "*",
   },
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   --       These are some example plugins that I've included in the kickstart repository.
